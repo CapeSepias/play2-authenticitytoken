@@ -55,4 +55,11 @@ public class AuthenticityTokenValidator extends Validator<Object> implements
     public Tuple<String, Object[]> getErrorMessageKey() {
         return Tuple(message, new Object[] {});
     }
+
+    public static boolean authenticationTokenIsValid(){
+        String[] authtokens = play.mvc.Http.Context.current().request().body().asFormUrlEncoded().get("authtoken");
+        if (authtokens == null || authtokens.length==0) return false;
+        String authtoken = authtokens[0];
+        return AuthenticityTokenValidator.authenticationToken().isValid(authtoken);
+    }
 }
