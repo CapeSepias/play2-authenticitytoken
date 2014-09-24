@@ -29,26 +29,13 @@ Should an attacker inject a different id, he will never figure how the generate 
 
 ## Usage
 
-**3 minutes**, success guarantied… follow these steps
+IMPORTANT: Tested with **Play! 2.1.0**
 
-IMPORTANT: You need to use the latest play2 **master**
+##Add the Token to FORM elements
 
-### 1. Install the module dependency
+### 1. Copy the source files
 
-** THIS IS DEPRECATED, just copy the source files in your project. It will work equaly well **
-
-Edit file `project/Build.scala` and adjust the following settings
-
-```
-val appDependencies = Seq(
-  "crionics" %% "play2-authenticitytoken" % "1.0-SNAPSHOT"
-)
-
-
-val main = PlayProject(appName, appVersion, appDependencies, mainLang = JAVA).settings(
-  resolvers += "Crionics Github Repository" at "http://orefalo.github.com/m2repo/releases/"
-)
-```
+Just copy them to your app folder and it should work fine.
 
 ### 2. Add the Token to FORM elements
 

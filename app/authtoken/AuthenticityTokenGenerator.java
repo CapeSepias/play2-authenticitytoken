@@ -15,5 +15,4 @@ public class AuthenticityTokenGenerator {
 		Context.current().session().put(AuthTokenConstants.AUTH_TOKEN, sign);
 		return uuid;
 	}
-	
 }
